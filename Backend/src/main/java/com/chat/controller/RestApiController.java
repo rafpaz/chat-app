@@ -33,7 +33,7 @@ public class RestApiController {
 
 	//Create new message
 	@RequestMapping(value = "/message/", method = RequestMethod.POST)
-	public ResponseEntity<Message> addArticle(@RequestBody Message message){
+	public ResponseEntity<Message> addMessage(@RequestBody Message message){
 		if (message == null)
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 

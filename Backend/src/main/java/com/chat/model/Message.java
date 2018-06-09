@@ -1,5 +1,7 @@
 package com.chat.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -22,6 +24,7 @@ public class Message implements Serializable {
 
 	@NotNull
 	@Column(name = "DATE", nullable = false)
+	@JsonFormat(pattern = "dd MMM yyyy hh:mm")
 	private Date date;
 
 	public Long getId() { return id; }
