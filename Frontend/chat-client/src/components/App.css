@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+#app-container{
+    border: black 1px solid;
+    margin: 20px auto;
+    width: 450px;
+}
+
+#send-area{
+    background-color: #dddddd;
+    padding: 15px;
+}
+
+#message-list{
+    padding: 15px;
+}
+
+#send-btn{
+    font-weight: bold;
+    font-size: 1.25rem;
+}

@@ -21,8 +21,8 @@ public class RestApiController {
 	MessageService messageService;
 
 	//Get all messages
-	@CrossOrigin(origins = {"http://localhost:4200"})
-	@RequestMapping(value = "/messages/", method = RequestMethod.GET)
+	@CrossOrigin(origins = {"http://localhost:3000"})
+	@RequestMapping(value = "/messages", method = RequestMethod.GET)
 	public ResponseEntity<List<Message>> getAllMessages(){
 		List<Message> messages = messageService.findAllMessagesOrderByDateAsc();
 		if (messages == null || messages.isEmpty()) {
@@ -33,8 +33,8 @@ public class RestApiController {
 	}
 
 	//Create new message
-	@CrossOrigin(origins = {"http://localhost:4200"})
-	@RequestMapping(value = "/message/", method = RequestMethod.POST)
+	@CrossOrigin(origins = {"http://localhost:3000"})
+	@RequestMapping(value = "/message", method = RequestMethod.POST)
 	public ResponseEntity<Message> addMessage(@RequestBody Message message){
 		if (message == null)
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);

@@ -1,0 +1,4 @@
+#message-text-area, message-text-area:hover{
+    resize: none;
+    border-radius: 10px;
+}

@@ -21,3 +21,5 @@ Frontend/yarn-debug.log*
 Frontend/yarn-error.log*
 
 Backend/.idea
+Frontend/.idea
+Frontend/Frontend.iml
