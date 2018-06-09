@@ -12,10 +12,10 @@ class App extends Component {
         this.state = {
             messages: []
         };
-        this.afterSend = this.afterSend.bind(this);
+        this.fetchAndUpdate = this.fetchAndUpdate.bind(this);
     }
 
-    componentDidMount() {
+    fetchAndUpdate(){
         fetch(API + "messages").then(result => result.json())
             .then(json => {
                 if (json) {
@@ -26,8 +26,8 @@ class App extends Component {
             });
     }
 
-    afterSend(){
-        this.componentDidMount();
+    componentDidMount() {
+        this.fetchAndUpdate();
     }
 
     render() {
@@ -45,7 +45,7 @@ class App extends Component {
                             </div>
                         </div>
                         <SendArea
-                            afterSend={this.afterSend}
+                            afterSend={this.fetchAndUpdate}
                         />
                     </div>
                 </div>
